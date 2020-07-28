@@ -34,3 +34,4 @@ The API handles the following routes:
 | DELETE | /api/posts/:id          | Removes the post with the specified id and returns the **deleted post object**.                                                                                             | YES            |
 | PUT    | /api/posts/:id          | Updates the post with the specified `id` using data from the `request body`. Returns the modified post.                                                                     | YES            |
 | GET    | /api/posts/user/:user_id | Returns an array of all post objects associated with the specified user id                                                                                                 | YES            |
+| POST   | /api/posts/user/:user_id | Creates a new post belonging to the user at the specified id                                                                                                               | YES            |
