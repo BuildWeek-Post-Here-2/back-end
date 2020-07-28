@@ -15,4 +15,8 @@ server.use(express.json());
 server.use('/api/auth', authRouter);
 server.use('/api/posts', authenticate, postsRouter);
 
+server.get('/', (req, res) => {
+    res.status(200).json({message: "Up and running!"})
+})
+
 module.exports = server;
