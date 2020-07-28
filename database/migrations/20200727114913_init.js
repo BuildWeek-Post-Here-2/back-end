@@ -11,7 +11,7 @@ exports.up = function(knex) {
         })
         .createTable('posts', posts => {
             posts.increments();
-            posts.integer('user_id').notNullable()
+            posts.integer('user_id').references("users.id").notNullable()
             posts.string('title').notNullable()
             posts.string('content')
             posts.string('subreddit')
