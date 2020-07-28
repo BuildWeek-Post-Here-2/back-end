@@ -30,19 +30,14 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
+    client: 'sqlite3',
+    connection: { filename: './database/posthere.db3' },
+    useNullAsDefault: true,
     migrations: {
-      tableName: 'knex_migrations'
-    }
+      directory: './database/migrations',
+      tableName: 'dbmigrations',
+    },
+    seeds: { directory: './database/seeds' },
   }
 
 };
