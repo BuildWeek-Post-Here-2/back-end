@@ -1,10 +1,10 @@
-# back-end
+# Post Here Back-end
 
-#### Database Schemas
+## Database Schemas
 
 The _Database Schemas_ for the `users` and `posts` resources are:
 
-##### Users
+### Users
 
 | field | data type        | metadata                                            |
 | ----- | ---------------- | --------------------------------------------------- |
@@ -12,7 +12,7 @@ The _Database Schemas_ for the `users` and `posts` resources are:
 | name  | string           | required, unique                                    |
 | password | string        | required                                            |
 
-##### Posts
+### Posts
 
 | field   | data type        | metadata                                            |
 | ------- | ---------------- | --------------------------------------------------- |

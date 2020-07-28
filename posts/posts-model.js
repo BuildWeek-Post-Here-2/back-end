@@ -14,7 +14,7 @@ function find() {
 
 function findBy(filter) {
     return db("posts as p")
-        .where(filter)
+        .where("p.user_id","=",filter)
         .select("p.*")
         .orderBy("p.id");
 }
