@@ -62,7 +62,7 @@ router.put('/:id', postValidator, (req, res) => {
 router.delete('/:id', (req, res) => {
     // Update post with specified ID
 
-    Posts.delete(req.params.id)
+    Posts.remove(req.params.id)
         .then(post => {
             res.status(200).json(post)
         })
