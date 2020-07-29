@@ -47,6 +47,30 @@ router.post('/user/:user_id', postValidator, (req, res) => {
         })
 })
 
+router.put('/:id', postValidator, (req, res) => {
+    // Update post with specified ID
+
+    Posts.update(req.params.id, req.body)
+        .then(post => {
+            res.status(201).json(post)
+        })
+        .catch(error => {
+            res.status(400).json({message: "There was an error updating post"})
+        })
+})
+
+router.delete('/:id', (req, res) => {
+    // Update post with specified ID
+
+    Posts.delete(req.params.id)
+        .then(post => {
+            res.status(200).json(post)
+        })
+        .catch(error => {
+            res.status(400).json({message: "There was an error deleting post from database"})
+        })
+})
+
 function postValidator(req, res, next) {
     console.log(req.body.title)
     if(req.body.title){
