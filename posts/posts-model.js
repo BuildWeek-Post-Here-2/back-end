@@ -40,7 +40,7 @@ function update(id, changes) {
       .where({ id })
       .update(changes)
       .then(() => {
-        return getById(id);
+        return findById(id);
       });
   }
   
