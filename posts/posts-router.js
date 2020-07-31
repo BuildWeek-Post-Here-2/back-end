@@ -63,8 +63,8 @@ router.delete('/:id', (req, res) => {
     // Update post with specified ID
 
     Posts.remove(req.params.id)
-        .then(post => {
-            res.status(200).json(post)
+        .then(count => {
+            res.status(200).json({removed: count})
         })
         .catch(error => {
             res.status(400).json({message: "There was an error deleting post from database"})
